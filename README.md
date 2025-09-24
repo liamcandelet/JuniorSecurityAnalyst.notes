@@ -60,7 +60,10 @@ Understanding this model helps defenders **detect, disrupt, and respond** to thr
 
 - Tools: Google Dorking, Shodan, LinkedIn scraping
 - Defender’s Job: Detect suspicious scanning or OSINT attempts (via threat intelligence)
-
+- TheHarvester - other than gathering emails, this tool is also capable of gathering names, subdomains, IPs, and URLs using multiple public data sources 
+- Hunter.io - this is  an email hunting tool that will let you obtain contact information associated with the domain
+- OSINT Framework - OSINT Framework provides the collection of OSINT tools based on various categories
+-- An attacker would also use social media websites such as LinkedIn, Facebook, Twitter, and Instagram to collect information on a specific victim he would want to attack or the company. The information found on social media can be beneficial for an attacker to conduct a phishing attack.
 ---
 
 ### 2. 📦 **Weaponization**
@@ -135,3 +138,88 @@ Understanding this model helps defenders **detect, disrupt, and respond** to thr
 - [MITRE ATT&CK Framework](https://attack.mitre.org)
 - Pyramid of Pain
 - TTPs (Tactics, Techniques, and Procedures)
+
+
+# 🧠 Unified Kill Chain (UKC) – Modern Attack Lifecycle Framework
+
+The **Unified Kill Chain (UKC)** expands on the traditional Lockheed Martin Cyber Kill Chain by incorporating tactics and techniques from the **MITRE ATT&CK** framework.
+
+Created by Paul Pols, the Unified Kill Chain outlines **18 stages across 3 phases**, giving defenders a broader view of **how adversaries plan, execute, and persist** across extended cyber campaigns.
+
+---
+
+## 🛠️ Purpose of the Unified Kill Chain
+
+- Integrates **technical + human-centric attacks**
+- Covers **initial access** to **persistence and exfiltration**
+- Helps defenders detect **linked TTPs over time**, not just isolated IOCs
+
+---
+
+## 🔺 The 3 Phases of the Unified Kill Chain
+
+---
+
+### 🔹 1. Initial Foothold (Recon → Execution)
+
+| Stage | Description |
+|-------|-------------|
+| **1. Reconnaissance** | Passive info gathering about targets (e.g., OSINT, social media) |
+| **2. Weaponization** | Crafting payloads or tools (e.g., custom malware, phishing kits) |
+| **3. Delivery** | Sending malicious content via email, USB, browser exploits |
+| **4. Social Engineering** | Psychological manipulation (e.g., phishing, pretexting) |
+| **5. Exploitation** | Triggering a vulnerability to gain access |
+| **6. Execution** | Running the attacker's code on the victim system |
+
+---
+
+### 🔸 2. Network Propagation (Persistence → Credential Access)
+
+| Stage | Description |
+|-------|-------------|
+| **7. Installation** | Setting up malware or backdoors (e.g., RATs) |
+| **8. Command & Control (C2)** | Establishing remote comms for attacker control |
+| **9. Internal Reconnaissance** | Mapping internal systems, accounts, shares |
+| **10. Credential Access** | Harvesting passwords, tokens, hashes |
+| **11. Privilege Escalation** | Gaining higher-level permissions |
+| **12. Lateral Movement** | Spreading through the network to new systems |
+
+---
+
+### 🔴 3. Action on Objectives (Collection → Impact)
+
+| Stage | Description |
+|-------|-------------|
+| **13. Collection** | Gathering sensitive files or data |
+| **14. Exfiltration** | Transferring stolen data outside the network |
+| **15. Impact** | Destroying data, deploying ransomware, defacing systems |
+| **16. Defensive Evasion** | Hiding presence, clearing logs, disabling tools |
+| **17. Persistence** | Maintaining access across reboots or network resets |
+| **18. Command Re-Establishment** | Reconnecting after disruption (e.g., using backup C2) |
+
+---
+
+## 📌 Key Takeaways
+
+- **UKC is attacker-centric**: focused on how campaigns unfold, not just individual attacks
+- **Broader than Cyber Kill Chain**: includes social engineering, post-exploitation, and long-term access
+- **Tightly maps to MITRE ATT&CK**: provides a bridge between **tactics** (ATT&CK) and **kill chain logic**
+
+---
+
+## 🧠 What I Learned
+
+- Detecting attackers earlier in the UKC = less damage & faster response
+- It's not enough to stop malware — you must disrupt **their entire campaign**
+- UKC helps defenders **think like attackers** across time, not just in isolated incidents
+- Ideal for threat hunting, SOC analysts, red vs blue team simulations
+
+---
+
+## 🔗 Further Reading
+
+- [Unified Kill Chain Whitepaper (Paul Pols)](https://www.unifiedkillchain.com)
+- [MITRE ATT&CK Matrix](https://attack.mitre.org)
+- [Lockheed Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+
+
